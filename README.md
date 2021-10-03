@@ -24,12 +24,12 @@
 
 - ### :globe_with_meridians: Web Application — [Streamlit](https://streamlit.io/)
 
-### :link: Useful Resources
+## :link: Useful Resources
 
-- #### [Image Annotation Tools](https://github.com/mrgloom/awesome-semantic-segmentation#annotation-tools)
+- ### [Image Annotation Tools](https://github.com/mrgloom/awesome-semantic-segmentation#annotation-tools)
 
-- #### [Awesome Panoptic Segmentation](https://github.com/Angzz/awesome-panoptic-segmentation)
+- ### [Awesome Panoptic Segmentation](https://github.com/Angzz/awesome-panoptic-segmentation)
 
-- #### [Awesome Semantic Segmentation in PyTorch](https://github.com/Tramac/awesome-semantic-segmentation-pytorch)
+- ### [Awesome Semantic Segmentation in PyTorch](https://github.com/Tramac/awesome-semantic-segmentation-pytorch)
 
-- #### [MSeg: A Composite Dataset for Multi-Domain Segmentation](https://github.com/mseg-dataset/mseg-semantic)
+- ### [MSeg: A Composite Dataset for Multi-Domain Segmentation](https://github.com/mseg-dataset/mseg-semantic)
