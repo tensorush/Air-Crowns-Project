@@ -2,7 +2,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
 [![Python](https://img.shields.io/badge/python-v3.9+-blue.svg?logo=python&style=for-the-badge)](https://pytorch.org)
-[![PyTorch](https://img.shields.io/badge/PyTorch-v1.9.0-red.svg?logo=PyTorch&style=for-the-badge)](https://pytorch.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-v1.9.1-red.svg?logo=PyTorch&style=for-the-badge)](https://pytorch.org)
 
 <p align="center">
     <img src="trees.png" width="512" height="512">
