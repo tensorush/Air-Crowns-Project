@@ -8,7 +8,7 @@
     <img src="trees.png" width="512" height="512">
 </p>
 
-## :man_technologist: :crown: IT-Crowns team project of a complete ML pipeline solving the task of panoptic segmentation for aerial drone images collected at the Alferevo airfield :small_airplane:
+## :man_technologist: :crown: IT-Crowns team project of a complete ML pipeline solving the task of semantic segmentation of aerial drone images collected at the Alferevo airfield :small_airplane:
 
 ## :robot: :shower: ML Pipeline Details
 
@@ -16,11 +16,11 @@
 
 - ### :toolbox: Model Frameworks — [Detectron 2](https://github.com/facebookresearch/detectron2), [OpenMMLab](https://github.com/open-mmlab/mmsegmentation)
 
-- ### :brain: Neural Networks — [DETR](https://github.com/facebookresearch/detr), [HRFormer](https://github.com/HRNet/HRFormer), [MaskFormer](https://github.com/facebookresearch/MaskFormer), [Panoptic-DeepLab](https://github.com/bowenc0221/panoptic-deeplab), [Mask R-CNN](https://github.com/matterport/Mask_RCNN)
+- ### :brain: Neural Networks — [DETR](https://github.com/facebookresearch/detr), [HRFormer](https://github.com/HRNet/HRFormer), [PFNets](https://github.com/lxtGH/PFSegNets), [MaskFormer](https://github.com/facebookresearch/MaskFormer), [Panoptic FPN](https://arxiv.org/pdf/1901.02446.pdf), [Panoptic-DeepLab](https://github.com/bowenc0221/panoptic-deeplab)
 
 - ### :octocat: Version Control Platform — [DAGsHub](https://dagshub.com/) integrating [GitHub](https://github.com/) + [DVC](https://dvc.org/) + [MLflow](https://mlflow.org/)
 
-- ### :straight_ruler: Metrics — [Panoptic Quality](https://arxiv.org/pdf/1801.00868.pdf)
+- ### :straight_ruler: Metrics — [Mean IoU, Panoptic Quality](https://arxiv.org/pdf/1801.00868.pdf)
 
 - ### :globe_with_meridians: Web Application — [Streamlit](https://streamlit.io/)
 
