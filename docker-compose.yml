@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    platform: linux/x86_64
+    container_name: app
+    build:
+      context: .
+    volumes:
+      - .:/it_crowns_solution
+    ports:
+      - 127.0.0.1:5000:5000

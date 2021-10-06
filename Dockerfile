@@ -15,7 +15,7 @@ RUN apt-get update \
     && apt-get --assume-yes install libpython3.9-dev \
     && apt-get --assume-yes install python3-pip
 
-WORKDIR /ml_model
+WORKDIR /it_crowns_solution
 COPY . .
 
 # Upgrade pip
@@ -25,4 +25,9 @@ RUN python3.9 -m pip install --upgrade pip \
 
 RUN python3.9 -m pip install torch==1.9.1 \
     && python3.9 -m pip install torchvision==0.10.0 \
-    && python3.9 -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
+    && python3.9 -m pip install 'git+https://github.com/facebookresearch/detectron2.git' \
+    && python3.9 -m pip install Flask
+
+WORKDIR /it_crowns_solution/web
+
+CMD python3.9 app.py
