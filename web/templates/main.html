@@ -9,10 +9,10 @@
 </head>
 <body>
   <h1>Hello, World!</h1>
-  <form method="POST" action="/upload">
+  <form method="POST" action="/upload" enctype="multipart/form-data">
     <div class="form-group">
       <label for="exampleFormControlFile1">Example file input</label>
-      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      <input type="file" class="form-control-file" required name="file">
       <button type="submit" class="btn btn-success">Submit</button>
     </div>
   </form>

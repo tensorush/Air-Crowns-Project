@@ -11,9 +11,10 @@ def main():
 
 @app.route('/upload', methods=['POST'])
 def upload():
-  app.logger.info(request.files)
+  app.logger.info(request.files['file'])
   return send_file('../trees.png')
   
+  return send_file('../trees.png'), '200'
 
 if __name__ == '__main__':
     app.run(port=5000, host="0.0.0.0", debug=True)
