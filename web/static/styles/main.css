@@ -1,0 +1,25 @@
+.upload-file {
+  margin: 100px 0 0 50px;
+  display: flex;
+  align-items: flex-start;
+  min-height: 500px;
+
+}
+
+.upload-file:first-child {
+  align-self: center;
+}
+.btn-success {
+  display: block;
+  margin-top: 15px;
+}
+
+.upload-file-image {
+  margin-left: 50px;
+  height: 400px;
+}
+
+.form-control-file {
+  margin-top: 10px;
+  display: block;
+}

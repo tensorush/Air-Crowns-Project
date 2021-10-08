@@ -6,15 +6,61 @@
   <title>Page Title</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".form-control-file").on('change',function() {
+        if (this.files && this.files[0]) {
+          let reader = new FileReader();
+          reader.onload = function(e) {
+            $('.pre-img').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(this.files[0]);
+        }
+      });
+
+      async function downloadFile(file) {
+        let formData = new FormData(file);
+        const response = await fetch('/upload', {
+          method: 'POST',
+          body: formData
+        });
+
+        const buffer = await response.arrayBuffer();
+        const bytes = new Uint8Array(buffer);
+        const blob = new Blob([bytes.buffer]);
+        const image = document.createElement('img');
+        const reader = new FileReader();
+
+        reader.addEventListener('load', (e) => {
+          image.src = e.target.result;
+          $('.upload-file-image').empty();
+          $('.upload-file-image').append(image);
+        });
+
+        reader.readAsDataURL(blob);
+      }
+
+       $('form').submit(function() {
+         downloadFile($(this)[0])
+         return false;
+       });
+    });
+  </script>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <form method="POST" action="/upload" enctype="multipart/form-data">
-    <div class="form-group">
-      <label for="exampleFormControlFile1">Example file input</label>
+  <div class="upload-file">
+    <form method="POST" enctype="multipart/form-data">
+      <div>
+          <img class="pre-img" src="#" alt="Select image" height="400px"/>
+      </div>
       <input type="file" class="form-control-file" required name="file">
       <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <div class="upload-file-image">
     </div>
-  </form>
+  </div>
 </body>
 </html>
