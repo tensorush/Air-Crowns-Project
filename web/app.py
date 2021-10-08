@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, send_file, \
                   send_from_directory, safe_join, abort
 
+import ss_multiclass_unet
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
