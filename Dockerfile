@@ -29,7 +29,8 @@ RUN python3.9 -m pip install Flask \
     && python3.9 -m pip install opencv-python \
     && python3.9 -m pip install pandas \
     && python3.9 -m pip install --upgrade tensorflow \
-    && python3.9 -m pip install keras
+    && python3.9 -m pip install keras \
+    && python3.9 -m pip install Pillow
 WORKDIR /it_crowns_solution/web
 
 CMD python3.9 app.py

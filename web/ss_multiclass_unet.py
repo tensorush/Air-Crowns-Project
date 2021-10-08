@@ -2,10 +2,10 @@ import numpy as np
 import pandas as pd
 
 import cv2
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import os
 import tensorflow as tf
-from tensorflow.keras.utils import Sequence
+#from tensorflow.keras.utils import Sequence
 
 from keras.models import Model
 from keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate, Conv2DTranspose, BatchNormalization, Dropout, Lambda
@@ -150,33 +150,33 @@ def multi_unet_model(n_classes=23, IMG_HEIGHT=H, IMG_WIDTH=W, IMG_CHANNELS=3):
 model = multi_unet_model()
 
 # получаем модель НН
-model =  tf.keras.models.load_model('/content/multi_unet_model_e350_v5.h5')
+#model =  tf.keras.models.load_model('/content/multi_unet_model_e350_v5.h5')
 
 # директория откуда будет браться изображение
-images_dir = '/content/alferevo-drone-dataset'
-images_name = list(map(lambda x: x.replace('.jpg', ''), os.listdir(images_dir)))
+#images_dir = '/content/alferevo-drone-dataset'
+#images_name = list(map(lambda x: x.replace('.jpg', ''), os.listdir(images_dir)))
 
 # путь к тестируемому изображению
-img_test = [os.path.join(images_dir, f"{name}") for name in images_name]
+#img_test = [os.path.join(images_dir, f"{name}") for name in images_name]
 
 # путь к словарю "метка-RGB"
-color_dict = pd.read_csv('class_dict.csv')
+#color_dict = pd.read_csv('class_dict.csv')
 
 # путь к директории куда отправится RGB семантическая сегментация
-rgb_dir = '/content/rgb_result/'
+#rgb_dir = '/content/rgb_result/'
 
-def predict_images(model, img):
-    
-    cmap = np.array(list(color_dict[[' r', ' g', ' b']].transpose().to_dict('list').values()))
-    
-    pred = model.predict(test_dataset(img_test, batch=1), steps=100)
-    predictions = np.argmax(pred, axis=3)
-    predictions = predictions.flatten()
-    predictions = predictions.reshape(-1, 800, 1200)
-
-    #img 
-    #for i in range(predictions.shape[0]):
-    img_result = Image.fromarray(np.asarray(cmap[predictions[0]]).astype(np.uint8))
-    img.save(f'rgb_result.png')
-        
-    return
+#def predict_images(model, img):
+#    
+#    cmap = np.array(list(color_dict[[' r', ' g', ' b']].transpose().to_dict('list').values()))
+#    
+#    pred = model.predict(test_dataset(img_test, batch=1), steps=100)
+#    predictions = np.argmax(pred, axis=3)
+#    predictions = predictions.flatten()
+#    predictions = predictions.reshape(-1, 800, 1200)
+#
+#    #img 
+#    #for i in range(predictions.shape[0]):
+#    img_result = Image.fromarray(np.asarray(cmap[predictions[0]]).astype(np.uint8))
+#    img.save(f'rgb_result.png')
+#        
+#    return
