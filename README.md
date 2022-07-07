@@ -1,4 +1,4 @@
-# :man_technologist: :crown: **IT-Crowns Project**
+# :small_airplane: :deciduous_tree: **Air Crowns Project**
 
 [![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
 [![Python](https://img.shields.io/badge/python-v3.9+-blue.svg?logo=python&style=for-the-badge)](https://pytorch.org)
@@ -8,9 +8,9 @@
     <img src="trees.png" width="512" height="512">
 </p>
 
-## :man_technologist: :crown: IT-Crowns team project of a complete ML pipeline solving the task of semantic segmentation of aerial drone images collected at the Alferevo airfield :small_airplane:
+## :eye: Air Crowns team project employs neural networks for the task of panoptic segmentation of drone image dataset collected at the Alferevo airfield.
 
-## :robot: :shower: ML Pipeline Details
+## :shower: Pipeline Details
 
 - ### :boxing_glove: Training Dataset — [Semantic Drone Dataset](https://www.tugraz.at/index.php?id=22387)
 
